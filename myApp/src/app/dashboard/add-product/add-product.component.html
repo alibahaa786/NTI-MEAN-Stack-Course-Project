@@ -1,0 +1,7 @@
+<section (click)="toggleAdd()" [style.cursor]="!isAdding? 'pointer' : 'default'">
+    <ng-container *ngIf="!isAdding">
+        <h2>Add Product</h2>
+        <i class="fa-solid fa-plus"></i>
+    </ng-container>
+    <app-edit-product [product]="emptyProduct" *ngIf="isAdding" (saveProduct)="addProduct($event)"></app-edit-product>
+</section>

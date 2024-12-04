@@ -1,0 +1,15 @@
+<section>
+    <div id="sort">
+        <h4>Sort By:</h4>
+        <select [(ngModel)]="sortByValue" (ngModelChange)="updateSort()">
+            <option value="best" selected>Best Selling</option>
+            <option value="alpha-asc">Alphabetically, A-Z</option>
+            <option value="alpha-desc">Alphabetically, Z-A</option>
+            <option value="price-asc">Price, low to high</option>
+            <option value="price-desc">Price, high to low</option>
+            <option value="date-asc">Date, old to new</option>
+            <option value="date-desc">Date, new to old</option>
+        </select>
+    </div>
+    <h4>"X" Products Found</h4>
+</section>

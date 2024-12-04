@@ -1,0 +1,66 @@
+#welcome-txt {
+    margin-left: 10vw;
+    padding-top: 10vh;
+    /* border: 1px solid black; */
+    width: 30vw;
+}
+
+#welcome-title {
+    font-size: 4.2rem;
+}
+
+#qayyim-title {
+    font-size: 5.2rem;
+    text-align: right;
+    margin-right: 2vw;
+    margin-top: -5vh;
+} 
+
+#welcome-txt p {
+    color: var(--secondary-color);
+}
+
+.welcome-buttons {
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    padding: 12px 30px;
+    margin-right: 0.7vw;
+    margin-top: 4vh;
+    font-weight: 700;
+}
+
+#shop-btn {
+    color: var(--primary-color);
+    background-color: var(--quatro-color);
+    border: none;
+    cursor: pointer;
+}
+
+#shop-btn:hover {
+    background-color: rgba(158, 223, 156,0.9);
+}
+
+#explore-btn {
+    background-color: var(--primary-color);
+    color: var(--secondary-color-active);
+    border: 2px solid var(--secondary-color);
+}
+
+#explore-btn:hover {
+    color: var(--secondary-color-active);
+    border-color: var(--secondary-color-active);
+    cursor: pointer;
+}
+
+/* #container {
+    position: absolute;
+    right: 0vw;
+    top: -2vh;
+    margin: 0;
+    width: 52vw;
+    overflow: hidden; 
+}
+
+#welcome-logo {
+    width: 55vw;
+} */

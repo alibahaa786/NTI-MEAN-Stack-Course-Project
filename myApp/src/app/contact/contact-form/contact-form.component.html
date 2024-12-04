@@ -1,0 +1,28 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div id="container">
+        <div id="name">
+            <div id="firstName-div">
+                <label for="firstName">First Name</label>
+                <input id="firstName" type="text" formControlName="firstName" placeholder="Eg. John">
+            </div>
+            <div id="lastName-div">
+                <label for="lastName">Last Name</label>
+                <input id="lastName" type="text" formControlName="lastName" placeholder="Eg. Doe">
+            </div>
+        </div>
+        <div id="email-div">
+            <label for="email">Email</label>
+            <input id="email" type="text" formControlName="email" placeholder="Eg. johndoe2002@gmail.com">
+        </div>
+        <div id="subject-div">
+            <label for="subject">Subject</label>
+            <input id="subject" type="text" formControlName="subject" placeholder="Eg. Subject">
+        </div>
+        <div id="msg-div">
+            <label for="msg">Message</label>
+            <textarea id="msg" rows="3" formControlName="msg"
+                placeholder="Eg. I would like to know more details about..."></textarea>
+        </div>
+        <button>Send Mail</button>
+    </div>
+</form>

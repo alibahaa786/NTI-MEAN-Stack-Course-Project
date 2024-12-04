@@ -1,0 +1,10 @@
+<section id="shop">
+    <!-- <app-page-title></app-page-title> -->
+    <app-filters [sortBy] = "sortValueBy"></app-filters>
+    <div id="container">
+        <app-sort (sortChange)="updateSort($event)"></app-sort>
+        <div class="product" *ngFor="let myProduct of products">
+            <app-product [product]="myProduct"></app-product>
+        </div>
+    </div>
+</section>

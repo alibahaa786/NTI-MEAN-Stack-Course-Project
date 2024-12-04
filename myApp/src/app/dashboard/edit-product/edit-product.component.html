@@ -1,0 +1,37 @@
+<form #newProductForm="ngForm" (ngSubmit)="save()">
+    <ul>
+        <li>
+            <label for="title">Title:</label>
+            <input name="title" required id="title" type="text" [value]="product.title" [(ngModel)]="product.title" #title="ngModel">
+        </li>
+        <li>
+            <label for="description">Description:</label>
+            <textarea name="description" id="description" rows="5" type="text" [value]="product.description"  [(ngModel)]="product.description" #description="ngModel"></textarea>
+        </li>
+        <li>
+            <label for="Category">Category:</label>
+            <input name="category" required id="Category" type="text" [value]="product.category"  [(ngModel)]="product.category" #category="ngModel">
+        </li>
+        <li>
+            <label for="Price">Price:</label>
+            <input name="price" required id="Price" type="number" min="0" step="0.01" [value]="product.price" [(ngModel)]="product.price" #price="ngModel">
+        </li>
+        <li>
+            <label for="Rating">Rating:</label>
+            <input name="rating" required id="Rating" type="number" [value]="product.rating"  [(ngModel)]="product.rating" #rating="ngModel">
+        </li>
+        <li>
+            <label for="Stock">Stock:</label>`
+            <input name="stock" required id="Stock" type="number" min="0" [value]="product.stock"  [(ngModel)]="product.stock" #stock="ngModel">
+        </li>
+        <li>
+            <label for="Brand">Brand:</label>
+            <input name="brand" required id="Brand" type="text" [value]="product.brand"  [(ngModel)]="product.brand" #title="ngModel">
+        </li>
+        <li>
+            <label for="Images">Images:</label>
+            <input name="images" required id="Images" type="text" [value]="product.images"  [(ngModel)]="product.images" #images="ngModel">
+        </li>
+    </ul>
+    <button [disabled]="newProductForm.invalid">Save</button>
+</form>

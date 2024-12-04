@@ -1,0 +1,109 @@
+*:not(i) {
+    margin: 0;
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    font-family: "Reem Kufi";
+}
+
+#brand-logo {
+    height: 12vh;
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    padding: 2vh 8vw;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    height: 13vh;
+    z-index: 5;
+    box-shadow: none;
+    transition: box-shadow 0.2s ease-out 0ms;
+}
+
+.sticky {
+    box-shadow: 0px 4px 8px rgba(0, 36, 27, 0.2);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    z-index: inherit;
+}
+
+#nav-texts {
+    margin-right: 4.5vw;
+    list-style-type: none;
+    display: flex;
+    z-index: inherit;
+}
+
+.nav-element a {
+    margin: 0 1.5vw;
+    font-size: 1rem;
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.nav-element:hover a {
+    color: var(--secondary-color-active);
+}
+
+.nav-line {
+    content: "";
+    /* border: 1px solid grey; */
+    height: 0.5vh;
+    background-color: var(--quatro-color);
+    margin: 0.2vh auto 0;
+    width: 0;
+    transition: width 0.2s ease-out 0ms;
+}
+
+.nav-element:hover .nav-line {
+    width: calc(100% - 3vw);
+}
+
+.nav-active a {
+    color: var(--secondary-color-active);
+}
+
+.nav-active .nav-line {
+    width: calc(100% - 3vw);
+}
+
+.logo {
+    margin: 0 1.3vw;
+    font-size: 1.3rem;
+    color: var(--secondary-color-active);
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+#nav-logos {
+    position: relative;
+}
+
+#cart-total {
+    position: absolute;
+    right: 0.8vw;
+    top: -2vh;
+    font-size: 0.7rem;
+    background-color: var(--tertiary-color);
+    color: var(--secondary-color-active);
+    border-radius: 8px;
+    padding: 1px 4px;
+}
+
+#user-email {
+    cursor: pointer;
+}
+
+#user-email {
+    color: var(--secondary-color-active);
+}

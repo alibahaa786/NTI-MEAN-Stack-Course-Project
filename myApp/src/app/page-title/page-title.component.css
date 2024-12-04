@@ -1,0 +1,19 @@
+section {
+    height: 75vh;
+    background-color: var(--primary-color);
+    color: var(--secondary-color-active);
+    margin: 0 auto;
+}
+
+#container {
+    position: absolute;
+    right: 0vw;
+    top: -2vh;
+    margin: 0;
+    width: 52vw;
+    overflow: hidden; 
+}
+
+#welcome-logo {
+    width: 55vw;
+}

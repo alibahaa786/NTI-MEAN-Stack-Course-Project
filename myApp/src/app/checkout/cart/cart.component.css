@@ -1,0 +1,51 @@
+section {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1.5fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "header1 header2 header3 header4";
+    width: 60vw;
+}
+
+#prod-title {
+    grid-area: header1;
+    display: inline-block;
+}
+
+#prod-price {
+    grid-area: header2;
+}
+
+#prod-quantity {
+    grid-area: header3;
+}
+
+#prod-total {
+    grid-area: header4;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 10vh;
+    opacity: 70%;
+}
+
+#empty {
+    text-align: center;
+}
+
+#empty a {
+    color: rgba(117, 113, 85, 0.5);
+}
+
+#empty a:hover {
+    color: var(--primary-color);
+}
+
+#left-arrow {
+    margin-right: 0.2vw;
+}
+
+div {
+    grid-column: span 4;
+}

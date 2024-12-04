@@ -1,0 +1,58 @@
+<div>
+    <section *ngIf="!signUpActive">
+        <div class="welcome-hello">
+            <h2>Hello, friend!</h2>
+            <p>Enter your name and start your journey with us.</p>
+            <button (click)="signUpActive = !signUpActive">Sign Up</button>
+        </div>
+        <div id="sign-in" class="form">
+            <h2>Sign In to Qayyim</h2>
+            <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+                <input required type="email" name="email" placeholder="Email" ngModel #email="ngModel" [pattern]="emailPattern">
+                <p class="warning" *ngIf="email.touched && email.invalid">
+                    <span *ngIf="email.errors?.['pattern']">Invalid email format</span>
+                    <span *ngIf="email.errors?.['required']">Email is required</span>
+                </p>
+                <input required type="password" name="password" placeholder="Password" ngModel #password="ngModel" [pattern]="passwordPattern" minlength="8">
+                <p class="warning" *ngIf="password.touched && password.invalid">
+                    <span *ngIf="password.errors?.['pattern']">Password must be at least 8 characters and contain at least one uppercase letter, one
+                        lowercase letter, and one number</span>
+                    <span *ngIf="password.errors?.['required']">Password is
+                        required</span>
+                </p>
+                <p class="warning" *ngIf="incorrectCred">Wrong email or password!</p>
+                <span id="link-forgot">Forgot Password?</span>
+                <button [disabled]="loginForm.invalid">Login</button>
+            </form>
+        </div>
+    </section>
+    <section *ngIf="signUpActive" id="sign-up-section">
+        <div class="welcome-hello">
+            <h2>Welcome Back, friend!</h2>
+            <p>To keep connected with us please login with your email and password.</p>
+            <button (click)="signUpActive = !signUpActive">Login</button>
+        </div>
+        <div id="sign-up" class="form">
+            <h2>Welcome to Qayyim</h2>
+            <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+                <input required type="email" name="email" placeholder="Email" ngModel #email="ngModel"
+                    [pattern]="emailPattern">
+                <p class="warning" *ngIf="email.touched && email.invalid">
+                    <span *ngIf="email.errors?.['pattern']">Invalid email format</span>
+                    <span *ngIf="email.errors?.['required']">Email is required</span>
+                </p>
+                <input required type="password" name="password" placeholder="Password" ngModel #password="ngModel"
+                    [pattern]="passwordPattern" minlength="8">
+                <p class="warning" *ngIf="password.touched && password.invalid">
+                    <span *ngIf="password.errors?.['pattern']">Password must be at least 8 letters and contain at least one uppercase letter, one
+                        lowercase letter, and one number</span>
+                    <span *ngIf="password.errors?.['required']">Password is
+                        required</span>
+                </p>
+                <p class="warning" *ngIf="incorrectCred">Wrong email or password!</p>
+                <span id="link-forgot">Forgot Password?</span>
+                <button [disabled]="loginForm.invalid">Login</button>
+            </form>
+        </div>
+    </section>
+</div>

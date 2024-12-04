@@ -1,0 +1,35 @@
+#shop {
+    background-color: var(--secondary-color-active);
+    text-align: center;
+    padding-bottom: 8vh;
+    display: flex;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 65vw;
+    margin: 0 auto;
+    gap: 5vh;
+}
+
+app-sort {
+    flex-basis: 100%;
+    margin-top: 5vh;
+}
+
+h2 {
+    color: var(--tertiary-color);
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 5vh;
+    margin-bottom: 1vh;
+}
+
+.product {
+    position: relative;
+    width: 25%;
+    height: 65vh;
+    /* border: 1px solid black; */
+}

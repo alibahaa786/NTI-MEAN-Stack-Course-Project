@@ -1,0 +1,22 @@
+section {
+    border: 2.5px dashed var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 5vw;
+    text-align: center;
+    padding: 15vh;
+    margin-bottom: 5vh;
+    /* cursor: pointer; */
+}
+
+div {
+    height: 100%;
+    width: 100%;
+}
+
+section:hover {
+    background-color: rgba(117, 113, 85,0.2);
+}
+
+i {
+    font-size: 2rem;
+}

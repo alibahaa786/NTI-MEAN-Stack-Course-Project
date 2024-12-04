@@ -1,0 +1,7 @@
+<section>
+    <img src="{{product.images}}">
+    <h3>{{product.title}}</h3>
+    <p class="price">{{product.price | currency}} </p>
+    <div id="active-highlight" [ngClass] = ></div>
+    <button (click)="addToCart(product)"><i class="fa-solid fa-plus"></i></button>
+</section>

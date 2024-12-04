@@ -1,0 +1,14 @@
+section {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2.5vw;
+    align-items: center;
+}
+
+#sort {
+    display: flex;
+}
+
+select {
+    margin-left: 1vw;
+}

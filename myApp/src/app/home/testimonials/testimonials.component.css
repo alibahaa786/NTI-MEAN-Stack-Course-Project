@@ -1,0 +1,89 @@
+section {
+    padding: 2vh;
+    text-align: center;
+    background-color: var(--secondary-color-active);
+}
+
+h2 {
+    color: var(--tertiary-color);
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 7vh;
+    margin-bottom: 7vh;
+}
+
+#container {
+    display: flex;
+    width: 80vw;
+    margin: 0 auto 10vh;
+    overflow: hidden;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+app-testimonial {
+    position: relative;
+    right: 0vw;
+    width: 50vw;
+    margin: 0 auto;
+    transition: right 1s ease 0ms;
+}
+
+.inactive-right {
+    position: absolute;
+    right: -70vw;
+}
+
+.inactive-left {
+    position: absolute;
+    /* top: 0; */
+    right: 90vw;
+}
+
+#pg-cont {
+    flex-basis: 100%;
+}
+
+#pg-cont div{
+    width: fit-content;
+    margin: 3vh auto;
+    display: flex;
+    justify-content: space-around;
+    column-gap: 1vw;
+}
+
+.pagination {
+    border: 1px solid var(--primary-color);
+    border-radius: 1vh;
+    width: 2vh;
+    height: 2vh;
+    transition: background-color 0.5s ease 0ms;
+    cursor: pointer;
+}
+
+.pagination.active {
+    background-color: var(--primary-color);
+}
+/* .goInactive {
+    r
+}
+
+.goActive {
+    font: 1em sans-serif;
+} */
+
+button {
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    height: 7vh;
+    width: 7vh;
+    border: none;
+    border-radius: 3.5vh;
+    margin: auto 0;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--tertiary-color);
+    color: var(--secondary-color-active);
+}

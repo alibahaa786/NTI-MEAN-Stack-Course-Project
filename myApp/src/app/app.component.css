@@ -1,0 +1,14 @@
+:host {
+    --primary-color: rgb(117, 113, 85);
+    --secondary-color: rgba(237, 226, 218,0.6);
+    --secondary-color-active: rgb(237, 226, 218);
+    --tertiary-color: rgb(0, 36, 27); 
+    --quatro-color: #9EDF9C;
+}
+
+*:not(i) {
+    margin: 0;
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    font-family: "Reem Kufi";
+}

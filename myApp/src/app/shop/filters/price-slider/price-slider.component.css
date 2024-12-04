@@ -1,0 +1,21 @@
+#price-filter {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rangeCtrl {
+    flex-basis: 50%;
+    text-align: center;
+    /* padding: 0 2vw; */
+}
+
+.rangeCtrl label {
+    display: block;
+}
+
+#price-output {
+    display: flex;
+    margin-top: 2vh;
+    flex-basis: 100%;
+    justify-content: space-evenly;
+}

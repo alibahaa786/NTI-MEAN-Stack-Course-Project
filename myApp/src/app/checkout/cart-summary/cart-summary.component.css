@@ -1,0 +1,46 @@
+section {
+    background-color: rgba(117, 113, 85, 0.3);
+    /* padding: 3vh 3vw; */
+    width: 25vw;
+    position: relative;
+    top: 3vh;
+}
+
+section div {
+    padding: 0.3vh 3vw;
+}
+
+#title {
+    padding: 3vh 3vw 2vh;
+    margin-bottom: 4vh;
+    border-bottom: 1px solid var(--tertiary-color);
+}
+
+div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#total {
+    margin-top: 5vh;
+    padding: 2vh 3vw;
+    background-color: rgba(117, 113, 85, 0.5);
+}
+
+button {
+    position:relative;
+    top: 3vh;
+    margin-top: 2vh;
+    width: 25vw;
+    background-color: var(--quatro-color);
+    border: none;
+    /* border-radius: 3vh; */
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--tertiary-color);
+    padding: 1.5vh;
+}
+
+button:hover {
+    background-color: rgba(158, 223, 156,0.8);
+}

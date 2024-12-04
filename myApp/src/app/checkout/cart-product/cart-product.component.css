@@ -1,0 +1,68 @@
+section {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1.5fr 1fr;
+    grid-template-areas: 
+        "product price quantity total";
+}
+
+#product {
+    grid-area: product;
+    display: flex;
+    align-items: center;
+}
+
+h4 {
+    padding-top: 4vh;
+}
+
+#price {
+    grid-area: price;
+    display: flex;
+    align-items: center;
+}
+
+#quantity {
+    grid-area: quantity;
+    /* justify-content: center; */
+    display: flex;
+    align-items: center;
+}
+
+#quantity * {
+    background-color: rgba(0, 36, 27,0.07);
+    height: 4vh;
+}
+
+#quantity span {
+    width: 5vw;
+    text-align: center;
+}
+
+#quantity i {
+    box-sizing: border-box;
+    padding: 0.9vh;
+}
+
+#quantity i:hover {
+    cursor: pointer;
+}
+
+#minus {
+    border-radius: 2vh 0 0 2vh;
+    /* border-right: 1px solid var(--tertiary-color); */
+}
+
+#plus {
+    border-radius: 0vh 2vh 2vh 0;
+    /* border-left: 1px solid var(--tertiary-color); */
+}
+
+#total {
+    grid-area: total;
+    display: flex;
+    align-items: center;
+}
+
+img {
+    width: 15vw;
+}

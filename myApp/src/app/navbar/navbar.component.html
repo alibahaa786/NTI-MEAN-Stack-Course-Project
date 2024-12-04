@@ -1,0 +1,33 @@
+<header [ngClass]="{sticky: onScroll()}">
+    <img src="./brand_logo.jpg" id="brand-logo" alt="El Qayyim Logo" (click)="goHome()">
+    <nav id="navigation">
+        <ul id="nav-texts">
+            <li class="nav-element" [ngClass]="{'nav-active': isActiveTab === 'home'}">
+                <a (click)="changeTab('home')" routerLink="/home">Home</a>
+                <div class="nav-line"></div>
+            </li>
+            <li class="nav-element"  [ngClass]="{'nav-active': isActiveTab === 'shop'}">
+                <a href="" (click)="changeTab('shop')" routerLink="/shop">Shop</a>
+                <div class="nav-line"></div>
+            </li>
+            <li class="nav-element"  [ngClass]="{'nav-active': isActiveTab === 'about'}">
+                <a href="" (click)="changeTab('about')" routerLink="/about-us">About Us</a>
+                <div class="nav-line"></div>
+            </li>
+            <li class="nav-element"  [ngClass]="{'nav-active': isActiveTab === 'contact'}">
+                <a href="" (click)="changeTab('contact')"  routerLink="/contact">Contact</a>
+                <div class="nav-line"></div>
+            </li>
+            <li class="nav-element" *ngIf="isAdmin()"  [ngClass]="{'nav-active': isActiveTab === 'dashboard'}">
+                <a href="" (click)="changeTab('dashboard')"  routerLink="/dashboard">Dashboard</a>
+                <div class="nav-line"></div>
+            </li>
+        </ul>
+        <div id="nav-logos">
+            <i class="fa-regular fa-user logo" (click)="showLogin()" *ngIf="!currentUser"></i>
+            <span id="user-email" (click)="signOut()" *ngIf="currentUser">{{currentUser.email}}</span>
+            <i class="fa-solid fa-cart-shopping logo" (click)="showCart()"></i>
+            <span id="cart-total">{{totalQuantity}}</span>
+        </div>
+    </nav>
+</header>

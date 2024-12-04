@@ -1,0 +1,6 @@
+<ul>
+    <li *ngFor="let category of myCategories">
+        <input type="checkbox" [id]="category" ngModel (ngModelChange)="updateCat(category, $event)">
+        <label [for]="category">{{category | capitalize}}</label>
+    </li>
+</ul>

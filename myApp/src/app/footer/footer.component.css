@@ -1,0 +1,32 @@
+footer {
+    padding-top: 2vh;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+#footer-div {
+    display: flex;
+    justify-content: space-between;
+    margin: 2vh auto 0vh;
+    padding-top: 2vh;
+    border-top: 1px solid var(--secondary-color);
+    width: 80vw;
+}
+
+img {
+    height: 8vh;
+}
+
+span {
+    margin: 0.5vw;
+}
+
+i {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin: 2vh 1vw;
+}
+
+i:hover {
+    color: var(--secondary-color-active);
+}

@@ -1,0 +1,17 @@
+<section>
+    <h3>Filters</h3>
+    <div class="filter">
+        <h4>Price</h4>
+        <i class="fa-solid fa-chevron-down dropdown" (click)="dropdownPrice()"
+            [ngClass]="{arActive: isActivePrice}"></i>
+        <app-price-slider class="filter-detail" [ngClass]="{active: isActivePrice}"
+            (priceChange)="updatePrice($event)"></app-price-slider>
+        <h4>Categories</h4>
+        <i class="fa-solid fa-chevron-down dropdown" (click)="dropdownCat()" [ngClass]="{arActive: isActiveCat}"></i>
+        <app-categories class="filter-detail" [ngClass]="{active: isActiveCat}" (catChange)="updateCat($event)"></app-categories>
+        <h4>Availability</h4>
+        <i class="fa-solid fa-chevron-down dropdown" (click)="dropdownAva()" [ngClass]="{arActive: isActiveAva}"></i>
+        <app-availability class="filter-detail" [ngClass]="{active: isActiveAva}"  (avaChange)="updateAva($event)"></app-availability>
+    </div>
+    <button (click)="applyFilters()">Apply Filters</button>
+</section>

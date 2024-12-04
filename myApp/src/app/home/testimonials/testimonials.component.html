@@ -1,0 +1,19 @@
+<section>
+    <h2>Testimonials</h2>
+    <div id="container">
+        <ng-container *ngFor="let testimonial of myTestimonials; let i = index">
+            <button *ngIf="isActive === i" (click)="back(i)"><i class="fa-solid fa-angle-left"></i></button>
+            <app-testimonial [testimonial]="testimonial"
+                *ngIf="i === isActive || i === (isActive - 1) % 5 || i === (isActive + 1) % 5 || (i === 4) && !(isActive)" [ngClass]="{
+                    'inactive-right': i === ((isActive + 1) % 5),
+                    'inactive-left': i === (isActive - 1) % 5 || (i === 4) && !(isActive)}"></app-testimonial>
+            <button *ngIf="isActive === i" (click)="next(i)"><i class="fa-solid fa-angle-right"></i></button>
+        </ng-container>
+        <div id="pg-cont">
+            <div>
+                <span *ngFor="let testimonial of myTestimonials; let i = index" class="pagination"
+                    [ngClass]="{active: i === isActive}" (click)="isActive = i"></span>
+            </div>
+        </div>
+    </div>
+</section>

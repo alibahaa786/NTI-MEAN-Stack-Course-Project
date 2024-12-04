@@ -1,0 +1,62 @@
+section {
+    padding: 3vh 3vw;
+    width: 28vw;
+}
+
+h3 {
+    text-align: left;
+    margin-bottom: 3vh;
+}
+
+.filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h4 {
+    margin-top: 1vh;
+}
+
+.dropdown{
+    transition: transform 0.25s ease 0ms;
+    transform-origin: 50% 25%;
+}
+
+.dropdown:hover {
+    cursor: pointer;
+}
+
+.arActive {
+    transform: rotate(180deg);
+}
+
+.filter-detail {
+    overflow: hidden;
+    flex-basis: 100%;
+    max-height: 0px;
+    transition: max-height 0.35s ease 0ms;
+}
+
+.filter-detail.active{
+    max-height: 100vh;
+    margin-bottom: 2vh;
+}
+
+button {
+    width: 100%;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--secondary-color-active);
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 1vh;
+    margin-top: 1.5vh;
+}
+
+button:hover {
+    background-color: var(--secondary-color-active);
+    color: var(--primary-color);
+    border: 1.5px solid var(--primary-color);
+}

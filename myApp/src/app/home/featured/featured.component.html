@@ -1,0 +1,10 @@
+<section id="featured">
+    <h2 id="title">Our Latest Products</h2>
+    <section id="products-sec">
+        <ng-container *ngFor="let myProduct of products; let i = index">
+            <div class="product" *ngIf="i < 3">
+                <app-product [product]="myProduct"></app-product>
+            </div>
+        </ng-container>
+    </section>
+</section>

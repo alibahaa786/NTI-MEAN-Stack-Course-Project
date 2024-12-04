@@ -1,0 +1,11 @@
+<section>
+    <app-welcome *ngIf="activeTab === 'home'"></app-welcome>
+    <app-shop-title *ngIf="activeTab === 'shop'"></app-shop-title>
+    <app-contact-title *ngIf="activeTab === 'contact'"></app-contact-title>
+    <app-cart-title *ngIf="activeTab === 'cart'"></app-cart-title>
+    <app-about-title  *ngIf="activeTab === 'about'"></app-about-title>
+    <app-dash-title *ngIf = "activeTab === 'dashboard'"></app-dash-title>
+    <div id="container">
+        <img src="logo+shadow.png" id="welcome-logo" alt="El Qayyim Logo">
+    </div>
+</section>

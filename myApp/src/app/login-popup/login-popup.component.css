@@ -1,0 +1,125 @@
+section {
+    display: flex;
+    position: fixed;
+    top: 15vh;
+    right: 20vw;
+    height: 70vh;
+    width: 60vw;
+    background-color: var(--secondary-color-active);
+    z-index: 200;
+}
+
+div {
+    text-align: center;
+}
+
+.welcome-hello {
+    width: 35%;
+    height: 100%;
+    background-color: var(--primary-color);
+    color: var(--secondary-color-active);
+}
+
+.welcome-hello h2 {
+    margin-top: 48%;
+}
+
+#sign-up-section .welcome-hello h2 {
+    margin-top: 35%;
+}
+
+.welcome-hello p {
+    padding: 0 2vw;
+}
+
+.form {
+    width: 65%;
+    height: 100%;
+}
+
+.form h2 {
+    margin-top: 20%;
+}
+
+#sign-up-section {
+    flex-direction: row-reverse;
+}
+
+#sign-up h2 {
+    margin-top: 10%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;
+    gap: 2vh;
+}
+
+input {
+    padding: 1vh 2vw;
+}
+
+#link-forgot {
+    text-decoration: underline;
+}
+
+#link-forgot:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+button {
+    width: 15vw;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    padding: 1vh 1vw;
+    margin-top: 2vh;
+}
+
+.welcome-hello button {
+    border: 1px solid var(--secondary-color-active);
+    background-color: var(--primary-color);
+    color: var(--secondary-color-active);
+}
+
+.welcome-hello button:enabled:hover {
+    border: 1px solid var(--secondary-color-active);
+    background-color: var(--secondary-color-active);
+    color: var(--primary-color);
+}
+
+.form button {
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color-active);
+}
+
+.form button:enabled:hover {
+    border: 1px solid var(--primary-color);
+    background-color: var(--secondary-color-active);
+    color: var(--primary-color);
+}
+
+button:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    opacity: 0.7;
+}
+
+.overlay {
+    /* display: none; */
+    position: fixed;
+    top: 0;
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: rgba(0, 36, 27, 0.5);
+}
+
+.warning {
+    color: red;
+}

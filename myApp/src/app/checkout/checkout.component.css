@@ -1,0 +1,6 @@
+section {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--secondary-color-active);
+    padding: 5vw;
+}

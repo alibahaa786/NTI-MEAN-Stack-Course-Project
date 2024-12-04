@@ -1,0 +1,13 @@
+<section>
+    <h3 id="prod-title">Product</h3>
+    <h3 id="prod-price">Price</h3>
+    <h3 id="prod-quantity">Quantity</h3>
+    <h3 id="prod-total">Total</h3>
+    <div *ngFor="let product of myProducts">
+        <app-cart-product [product]="product" id="product"></app-cart-product>
+    </div>
+</section>
+<div id="empty">
+    <h2 *ngIf="!myProducts[0]">Your Cart is Empty <i class="fa-solid fa-cart-shopping"></i></h2>
+    <a routerLink="/shop" (click)="changeTab('shop')"><i id="left-arrow" class="fa-solid fa-arrow-left"></i>Back to shopping</a>
+</div>

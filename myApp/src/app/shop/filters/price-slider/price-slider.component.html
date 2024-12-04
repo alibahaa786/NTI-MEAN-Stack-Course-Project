@@ -1,0 +1,20 @@
+<section id="price-filter">
+    <div class="rangeCtrl">
+        <label for="min-price">Minimum Price</label>
+        <input type="range" id="min-price" [(ngModel)]="minPrice" min="100" max="9998"
+            (input)="updatePriceRange('min')">
+    </div>
+    <div class="rangeCtrl">
+        <label for="max">Maximum Price</label>
+        <input type="range" id="max-price" [(ngModel)]="maxPrice" min="101" max="9999"
+            (input)="updatePriceRange('max')">
+    </div>
+    <div id="price-output">
+        <!-- <span>{{minPrice | currency}}</span> -->
+        <input type="number" [(ngModel)]="minPrice" min="100" max="9998" (change)="updatePriceRange('min')"
+            (input)="updatePriceRange('min')">
+        <span>TO</span>
+        <input type="number" [(ngModel)]="maxPrice" min="101" max="9999" (change)="updatePriceRange('max')"
+            (input)="updatePriceRange('max')">
+    </div>
+</section>

@@ -1,0 +1,25 @@
+#review-sec {
+    width: 50vw;
+    margin: 0 auto;
+}
+
+* {
+    margin-bottom: 2vh;
+}
+/* 
+.goInactive {
+    r
+}
+
+.goActive {
+    font: 1em sans-serif;
+} */
+
+img {
+    width: 4vw;
+    border-radius: 2vw;
+}
+
+p {
+    margin-bottom: 5vh;
+}

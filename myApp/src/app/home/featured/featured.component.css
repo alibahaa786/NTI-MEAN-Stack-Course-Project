@@ -1,0 +1,28 @@
+#featured {
+    background-color: var(--secondary-color-active);
+    height: 90vh;
+}
+
+#title {
+    color: var(--tertiary-color);
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 7vh;
+    margin-bottom: 1vh;
+}
+
+#products-sec {
+    display: flex;
+    margin: 0 auto;
+    width: 80vw;
+}
+
+.product {
+    position: relative;
+    width: 20vw;
+    height: 65vh;
+    border-radius: 6vh;
+    /* border: 1px solid var(--quatro-color); */
+    margin: 3vh 3vw;
+    text-align: center;
+}

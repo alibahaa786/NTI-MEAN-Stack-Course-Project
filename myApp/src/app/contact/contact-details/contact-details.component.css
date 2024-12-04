@@ -1,0 +1,24 @@
+section {
+    background-color: var(--secondary-color-active);
+    padding-bottom: 8vh;
+}
+
+#container {
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+    margin: 0 auto;
+}
+
+.icon-cont {
+    display: inline;
+    background-color: var(--tertiary-color);
+    padding: 1.2vw 1.5vw;
+    margin-right: 1vw;
+    border-radius: 1vw;
+}
+
+i {
+    color: var(--secondary-color-active);
+    font-size: large;
+}

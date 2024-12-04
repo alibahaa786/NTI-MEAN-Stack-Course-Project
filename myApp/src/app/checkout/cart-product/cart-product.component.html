@@ -1,0 +1,20 @@
+<section>
+    <div id="product">
+        <img [src]="product.images" [alt]="product.title">
+        <div>
+            <h4>{{product.title}}</h4>
+            <p>{{product.brand}}</p>
+        </div>
+    </div>
+    <div id="price">
+        <p>{{product.price | currency}}</p>
+    </div>
+    <div id="quantity">
+        <i class="fa-solid fa-minus" id="minus" (click)="minusItem(product)"></i>
+        <span>{{product.quantity}}</span>
+        <i class="fa-solid fa-plus" id="plus" (click)="addItem(product)"></i>
+    </div>
+    <div id="total">
+        <p>{{product.price * product.quantity | currency}}</p>
+    </div>
+</section>

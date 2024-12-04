@@ -1,0 +1,10 @@
+<ul>
+    <li>
+        <input type="checkbox" id="available" name="availability" [(ngModel)]="inStock" (ngModelChange)="stockChange()">
+        <label for="available">In Stock</label>
+    </li>
+    <li>
+        <input type="checkbox" id="not-available" [(ngModel)]="outOfStock" (ngModelChange)="stockChange()">
+        <label for="not-available">Out of Stock</label>
+    </li>
+</ul>

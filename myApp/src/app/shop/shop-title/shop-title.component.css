@@ -1,0 +1,12 @@
+div {
+    margin-left: 10vw;
+    padding-top: 10vh;
+    /* border: 1px solid black; */
+    width: 30vw;
+    text-align: left;
+}
+
+h1 {
+    font-size: 4.2rem;
+    padding-top: 15vh;
+}
