@@ -40,6 +40,7 @@ import { DashTitleComponent } from './dashboard/dash-title/dash-title.component'
 import { EditProductComponent } from './dashboard/edit-product/edit-product.component';
 import { AddProductComponent } from './dashboard/add-product/add-product.component';
 import { LoginComponent } from './login/login.component';
+import { AddressComponent } from './address/address.component';
 
 @NgModule({
   declarations: [
@@ -78,7 +79,8 @@ import { LoginComponent } from './login/login.component';
     DashTitleComponent,
     EditProductComponent,
     AddProductComponent,
-    LoginComponent
+    LoginComponent,
+    AddressComponent
   ],
   imports: [
     BrowserModule,

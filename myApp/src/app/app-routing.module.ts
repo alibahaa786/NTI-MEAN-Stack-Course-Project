@@ -5,10 +5,10 @@ import { ShopComponent } from './shop/shop.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { CheckoutComponent } from './checkout/checkout.component';
-import { LoginPopupComponent } from './login-popup/login-popup.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { authGuard } from './guards/auth.guard';
 import { LoginComponent } from './login/login.component';
+import { AddressComponent } from './address/address.component';
 
 const routes: Routes = [
   {path:"", redirectTo:"home", pathMatch:"full"},
@@ -19,6 +19,7 @@ const routes: Routes = [
   {path:"your_cart", component: CheckoutComponent},
   {path:"dashboard", component: DashboardComponent, canActivate:[authGuard]},
   {path:"login", component: LoginComponent},
+  {path:"address", component: AddressComponent},
   {path:"**", redirectTo:"home"}
 ];
 
