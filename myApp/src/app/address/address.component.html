@@ -1,1 +1,105 @@
-<p>address works!</p>
+<form #addressForm="ngForm" (ngSubmit)="onSubmit(addressForm)">
+    <fieldset id="contact-field">
+        <h2>Contact</h2>
+        <label for="email">Email</label>
+        <input name="email" id="email" type="text" placeholder="Email" ngModel required #email="ngModel"
+            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+        <div class="msg" *ngIf="email.invalid && email.touched">
+            <span *ngIf="email.errors?.['required']">*Email is required</span>
+            <span *ngIf="email.errors?.['pattern']">Please enter a valid email</span>
+        </div>
+    </fieldset>
+    <fieldset id="address-field">
+        <h2>Delivery</h2>
+        <label for="country">Country/Region</label>
+        <select name="country" id="country" [(ngModel)]="selectedCountry" required #country="ngModel">
+            <option value="egypt" selected>Egypt</option>
+        </select>
+        <div id="first-name-div">
+            <label for="first-name" id="first-name-label">First Name</label>
+            <input name="firstName" id="first-name" type="text" placeholder="First Name" ngModel required
+                #firstName="ngModel">
+            <div class="msg" *ngIf="firstName.invalid && firstName.touched">*First name is required</div>
+        </div>
+        <div id="last-name-div">
+            <label for="last-name" id="last-name-label">Last Name</label>
+            <input name="lastName" id="last-name" type="text" placeholder="Last Name" ngModel required
+                #lastName="ngModel">
+            <div class="msg" *ngIf="lastName.invalid && lastName.touched">*Last name is required</div>
+
+        </div>
+        <div id="address-div">
+            <label for="address" id="address-label">Address</label>
+            <input name="address" id="address" type="text" placeholder="Address" ngModel required #address="ngModel">
+            <div class="msg" *ngIf="address.invalid && address.touched">*Address is required</div>
+        </div>
+        <div id="city-div">
+            <label for="city" id="city-label">City</label>
+            <input name="city" id="city" type="text" placeholder="City" ngModel required #city="ngModel">
+            <div class="msg" *ngIf="city.invalid && city.touched">*City is required</div>
+        </div>
+        <div id="gov-div">
+            <label for="governorate" id="governorate-label">Governorate</label>
+            <select name="governorate" id="governorate" type="text" placeholder="Governorate" ngModel required
+                #governorate="ngModel">
+                <option value="" disabled selected>Select your governorate</option>
+                <option value="cairo">Cairo</option>
+                <option value="giza">Giza</option>
+                <option value="alexandria">Alexandria</option>
+                <option value="aswan">Aswan</option>
+                <option value="asyut">Asyut</option>
+                <option value="beheira">Beheira</option>
+                <option value="beni-suef">Beni Suef</option>
+                <option value="dakahlia">Dakahlia</option>
+                <option value="damietta">Damietta</option>
+                <option value="faiyum">Faiyum</option>
+                <option value="gharbia">Gharbia</option>
+                <option value="helwan">Helwan</option>
+                <option value="ismailia">Ismailia</option>
+                <option value="kafr-el-sheikh">Kafr El Sheikh</option>
+                <option value="luxor">Luxor</option>
+                <option value="matruh">Matruh</option>
+                <option value="minya">Minya</option>
+                <option value="monufia">Monufia</option>
+                <option value="new-valley">New Valley (El Wadi El Gedid)</option>
+                <option value="north-sinai">North Sinai</option>
+                <option value="port-said">Port Said</option>
+                <option value="qalyubia">Qalyubia</option>
+                <option value="qena">Qena</option>
+                <option value="red-sea">Red Sea</option>
+                <option value="sharqia">Sharqia</option>
+                <option value="sohag">Sohag</option>
+                <option value="south-sinai">South Sinai</option>
+                <option value="suez">Suez</option>
+            </select>
+            <div class="msg" *ngIf="governorate.invalid && governorate.touched">*Governorate is required</div>
+        </div>
+        <div id="postal-div">
+            <label for="postal-code" id="postal-code-label">Postal Code</label>
+            <input name="postalCode" id="postal-code" type="text" placeholder="Postal Code (optional)" ngModel
+                #postalCode="ngModel">
+        </div>
+        <div id="phone-div">
+            <label for="phone" id="phone-label">Phone</label>
+            <input type="text" id="country-code" name="countryCode" ngModel="+20" disabled>
+            <input name="phone" id="phone" type="text" placeholder="Phone" ngModel required #phone="ngModel"
+                pattern="^1[0125][0-9]{8}$">
+            <div class="msg" *ngIf="phone.invalid && phone.touched">
+                <span *ngIf="phone.errors?.['required']">*Phone is required</span>
+                <span *ngIf="phone.errors?.['pattern']">Enter a valid phone number</span>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset id="shipping-method">
+        <h2>Shipping Method</h2>
+
+    </fieldset>
+    <fieldset id="Payment">
+        <h2>Payment</h2>
+        <p>All transactions are secure and encrypted.</p>
+    </fieldset>
+    <fieldset>
+        <h2>Billing Address</h2>
+    </fieldset>
+    <button [disabled]="addressForm.invalid">Place Order</button>
+</form>

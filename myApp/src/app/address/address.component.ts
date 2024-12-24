@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-address',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './address.component.css'
 })
 export class AddressComponent {
+  onSubmit(form: NgForm) {
+    console.log(form);
+  }
 
+  selectedCountry = 'egypt'
 }

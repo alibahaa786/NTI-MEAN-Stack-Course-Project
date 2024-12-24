@@ -1,0 +1,68 @@
+form {
+    margin: 5vh 10vw;
+    width: 50vw;
+}
+
+label {
+    display: block;
+}
+
+
+fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+fieldset * {
+    flex-basis: 100%;
+}
+
+
+#first-name-div, #last-name-div {
+    flex-basis: 48%;
+}
+
+#city-div, #gov-div, #postal-div {
+    flex-basis: 31%;
+}
+
+#phone-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#phone-div label {
+    flex-basis: 100%;
+}
+
+#country-code {
+    flex-basis: 10%;
+}
+
+#phone {
+    flex-basis: 87%;
+}
+
+label {
+    margin-bottom: 0.5vh;
+}
+
+input, select {
+    padding: 1vh 1.5vh;
+    width: 100%;
+    border-radius: 1vh;
+    border: 1px solid black;
+    margin-bottom: 1.5vh;
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+.msg {
+    font-size: small;
+    color: red;
+    margin-top: -1vh;
+}
